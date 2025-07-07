@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Contact Us</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html">Cart</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <section class="card">
+    <h2>We’d love to hear from you!</h2>
+    <form id="contactForm">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" required style="width:100%; padding:0.5rem; margin:0.3rem 0;"><br>
+      
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" required style="width:100%; padding:0.5rem; margin:0.3rem 0;"><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" rows="5" required style="width:100%; padding:0.5rem; margin:0.3rem 0;"></textarea><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer>&copy; 2025 Fashion Store</footer>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for contacting us!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

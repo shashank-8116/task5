@@ -1,0 +1,46 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop - Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Shop Our Collection</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html">Cart</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <section class="products">
+    <div class="card product">
+      <img src="https://www.harley-davidson.com/content/dam/h-d/images/product-images/merchandise/2022/july-replenishment/99040-23vw/99040-23VW_F.jpg?impolicy=myresize&rw=700" alt="Denim Jacket">
+      <h3>Denim Jacket</h3>
+      <p>₹999</p>
+      <button onclick="addToCart('Denim Jacket', 999)">Add to Cart</button>
+    </div>
+    <div class="card product">
+      <img src="https://img.kwcdn.com/product/fancy/3354c053-a613-4b00-9c06-eeec24fb0afe.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="Summer Dress">
+      <h3>Summer Dress</h3>
+      <p>₹799</p>
+      <button onclick="addToCart('Summer Dress', 799)">Add to Cart</button>
+    </div>
+    <div class="card product">
+      <img src="https://cdn.thewirecutter.com/wp-content/media/2024/05/runningshoesforyou-2048px-2254.jpg?auto=webp&quality=75&width=1024" alt="Running Shoes">
+      <h3>Running Shoes</h3>
+      <p>₹1199</p>
+      <button onclick="addToCart('Running Shoes', 1199)">Add to Cart</button>
+    </div>
+    <div class="card product">
+      <img src="https://shopdressup.com/cdn/shop/files/shopdressup_aviator_sunglasses-7.jpg?v=1707404739&width=1500" alt="Sunglasses">
+      <h3>Sun glasses</h3>
+      <p>₹799</p>
+      <button onclick="addToCart('Sunglasses', 599)">Add to Cart</button>
+    </div>
+  </section>
+  <footer>&copy; 2025 Fashion Store</footer>
+  <script src="script.js"></script>
+</body>
+</html>

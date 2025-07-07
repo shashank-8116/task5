@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Login</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
+  <section class="card">
+    <form id="loginForm">
+      <label>Email:</label><br>
+      <input type="email" id="loginEmail" required style="width:100%; margin: 0.5rem 0;"><br>
+      <label>Password:</label><br>
+      <input type="password" id="loginPassword" required style="width:100%; margin: 0.5rem 0;"><br>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+  </section>
+  <footer>&copy; 2025 Fashion Store</footer>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+      const user = JSON.parse(localStorage.getItem(email));
+
+      if (user && user.password === password) {
+        alert("Login successful!");
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid credentials!");
+      }
+    });
+  </script>
+</body>
+</html>

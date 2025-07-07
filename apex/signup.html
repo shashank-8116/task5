@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Sign Up</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <section class="card">
+    <form id="signupForm">
+      <label>Name:</label><br>
+      <input type="text" id="name" required style="width:100%; margin: 0.5rem 0;"><br>
+      <label>Email:</label><br>
+      <input type="email" id="email" required style="width:100%; margin: 0.5rem 0;"><br>
+      <label>Password:</label><br>
+      <input type="password" id="password" required style="width:100%; margin: 0.5rem 0;"><br>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </section>
+  <footer>&copy; 2025 Fashion Store</footer>
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      
+      const user = { name, password };
+      localStorage.setItem(email, JSON.stringify(user));
+      alert("Signup successful! Please login.");
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>
